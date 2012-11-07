@@ -6,9 +6,9 @@
 <!-- include header, breadcrumb -->
 	<%include file="header.html"/>
 <!-- include left main part, the routine section -->
-	<%include file="main-left.fragment"/>
+	<%include file="main_left.fragment"/>
 <!-- include right main part, the notice, blog, etc -->
-	<%include file="main-right.fragment"/>
+	<%include file="main_right.fragment"/>
 </body>
 
 </html>
