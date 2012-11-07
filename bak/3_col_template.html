@@ -1,0 +1,27 @@
+<%
+    rows = rows_val
+%>
+<html>
+	<%include file="included.txt"/>
+     <style tyle="css/text">
+          .row{
+          }    
+          .col_3{
+          }
+     </style>
+     <body>
+         % for row in rows:
+             ${makerow(row)}
+         % endfor
+     </body>
+</html>
+<%def name="makerow(row)">
+    <div class="row">
+    % for name in row:
+          <div class="col">
+        ${row['p']}
+          </div>
+    % endfor
+    </div>
+</%def>
+

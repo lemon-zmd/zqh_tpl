@@ -1,0 +1,2 @@
+this is one included txt.
+${included_val['p']}
