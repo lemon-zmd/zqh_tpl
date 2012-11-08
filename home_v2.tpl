@@ -5,10 +5,18 @@
 <body>
 <!-- include header, breadcrumb -->
 	<%include file="header.html"/>
-<!-- include left main part, the routine section -->
-	<%include file="main_left.fragment"/>
-<!-- include right main part, the notice, blog, etc -->
-	<%include file="main_right.fragment"/>
+	<div class="main">
+
+		<!-- include left main part, the routine section -->
+		<div class="main_left">
+			<%include file="main_left.fragment"/>
+		</div>
+
+		<!-- include right main part, the notice, blog, etc -->
+		<div class="main_right">
+		<%include file="main_right.fragment"/>
+		</div>
+	</div>
 </body>
 
 </html>

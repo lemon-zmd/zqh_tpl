@@ -1,0 +1,34 @@
+.route-thumbnail{
+	overflow:hidden;
+	background-color:#66B866
+}
+.route-detail{
+	height:100%
+}
+.main{
+	margin: 0px auto;
+	overflow:hidden;
+	width:1000px;
+}
+.main_left{
+	float:left;
+	width:700px;
+}
+.main_right{
+	float:left;
+	width:300px
+}
+.route-row{
+	height:120px;
+	/*font: 0px/0px sans-serif;
+	clear: both;*/
+}
+.route-row img{
+	float:left;
+	margin:8px 4px 8px 4px;
+	width:150px;
+	height:100px;
+}
+.route-img{
+	padding:8px;
+}

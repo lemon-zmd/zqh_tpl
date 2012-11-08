@@ -1,1 +1,44 @@
-left
+	<!-- thumbnail image part -->
+	<div class="route-thumbnail">
+		<p>
+		推荐路线
+		<p>
+
+		<div class="route-row routine-img">
+			%	for num in range(1,4):
+			<img src="img/route-${num}.png"></img>
+			% endfor
+		</div>
+
+		<div class="route-row">
+			%	for num in range(1,4):
+			<img src="img/route-${num}.png"></img>
+			% endfor
+		</div>
+	</div>
+
+	<!-- route X -->
+	<div class="route-detail">
+		<p id="route-x">
+		路线X
+		</p>
+		<!-- 线路简介 -->
+		<div class="route-row">
+			<img src="img/route-1.png">
+			<p>
+				第一天，第二天。。。
+			</p>
+		</div>
+		<!-- 预算 -->
+		<div class="route-row">
+			预算
+		</div>
+		<!-- 行程，照片 -->
+		<div class="route-row">
+			行程|照片|etc
+		</div>
+		<!-- 相关 -->
+		<div class="route-row">
+			相关博客
+		</div>
+	</div>
