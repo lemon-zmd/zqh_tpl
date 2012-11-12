@@ -1,4 +1,35 @@
 	<!-- thumbnail image part -->
+	<style type="text/css">
+		.route-detail-title{
+			width:100px;
+			height:35px;
+			line-height:35px;
+			-webkit-border-radius: 10px;
+			-moz-border-radius: 10px;
+			border-radius: 10px 10px 0px 0px;	
+			color:white;
+			font-size:20px;
+			text-align:center;
+		}
+		.route-x-header-row{
+			border-bottom:5px solid #80C8B5;
+		}
+		.route-x-detail-title{
+			background-color:#80C8B5;
+		}
+		.budget-header-row{
+			border-bottom:5px solid #C2DD91;
+		}
+		.budget-detail-title{
+			background-color:#C2DD91;
+		}
+		.other-header-row{
+			border-bottom:5px solid #C2DD91;
+		}
+		.other-detail-title{
+			background-color:#C2DD91;
+		}
+	</style>
 	<div class="route-thumbnail">
 		<p>
 		推荐路线
@@ -18,27 +49,61 @@
 	</div>
 
 	<!-- route X -->
-	<div class="route-detail">
-		<p id="route-x">
-		路线X
-		</p>
-		<!-- 线路简介 -->
+	<div>
+		<!-- 路线 -->
+		<div class="route-row route-x-header-row"> 
+			<p class="route-detail-title route-x-detail-title" id="route-x">
+				路线X
+			</p>
+		</div>
+			<!-- 线路简介 -->
 		<div class="route-row">
 			<img src="img/route-1.png">
 			<p>
 				第一天，第二天。。。
 			</p>
 		</div>
+
 		<!-- 预算 -->
-		<div class="route-row">
+		<div class="route-row budget-header-row">
+			<p class="route-detail-title budget-detail-title">
 			预算
+			</p>
 		</div>
+		<p>人均:¥3000元/人</p>
+		<p>注:预算。。。</p>
+
 		<!-- 行程，照片 -->
-		<div class="route-row">
-			行程|照片|etc
+		<div class="route-row other-header-row">
+			<p class="route-detail-title other-detail-title">
+				行程|照片|etc
+			</p>
 		</div>
+		<p>行程</p>
+		<p>
+			D1 西宁-丹葛尔古城-日月山-倒淌河-二郎剑-黑马河-茶卡盐湖(宿或返回黑马河宿) 食:
+宿:
+详细介绍:
+￼￼￼
+￼￼￼￼D3
+健谈。非常熟悉路况。
+详细介绍:
+D3
+健谈。非常熟悉路况。
+.........................................................
+.....................
+...................................................... ............
+￼￼￼￼D2 黑马河-环湖西路-鸟岛-默勒草原-大冬树山-冰沟林海-祁连县(宿) 食:
+宿:
+详细介绍:
+D3 祁连-卓尔山牛心山-祁连草原-岗什卡雪峰-门源油菜花海-大坂山-黑泉水库-西宁 食:
+宿:
+详细介绍:
+		</p>
+
 		<!-- 相关 -->
 		<div class="route-row">
 			相关博客
 		</div>
+		
 	</div>

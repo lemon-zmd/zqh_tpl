@@ -1,9 +1,6 @@
 .route-thumbnail{
 	overflow:hidden;
-	background-color:#66B866
-}
-.route-detail{
-	height:100%
+	#background-color:#66B866
 }
 .main{
 	margin: 0px auto;
@@ -19,9 +16,7 @@
 	width:300px
 }
 .route-row{
-	height:120px;
-	/*font: 0px/0px sans-serif;
-	clear: both;*/
+	overflow:hidden;
 }
 .route-row img{
 	float:left;
