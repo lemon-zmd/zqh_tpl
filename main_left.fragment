@@ -1,6 +1,8 @@
 	<!-- thumbnail image part -->
 	<style type="text/css">
 		.route-detail-title{
+			margin-right:10px;
+			float:left;
 			width:100px;
 			height:35px;
 			line-height:35px;
@@ -26,23 +28,40 @@
 		.other-header-row{
 			border-bottom:5px solid #C2DD91;
 		}
-		.other-detail-title{
+		.other-detail-title-selected{
+			border-top:3px solid #C2DD91;
+			border-left:3px solid #C2DD91;
+			border-right:3px solid #C2DD91;
 			background-color:#C2DD91;
 		}
+		.other-detail-title-unselected{
+			color:black;
+			border-top:3px solid #C2DD91;
+			border-left:3px solid #C2DD91;
+			border-right:3px solid #C2DD91;
+		}
 	</style>
+<script type="text/javascript">
+		$(window).load(function() {
+			$('#route-img-1').css({'border':'3px solid #C2DD91'});
+			//$('#qq1').html('<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2259531092&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:2259531092:41" alt="点击这里给我发消息" title="点击这里给我发消息"></a>');
+			//$('#qq2').html('<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2691531884&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:2691531884:41" alt="点击这里给我发消息" title="点击这里给我发消息"></a>');
+			//$("#iframe1").html('<iframe width="370" height="500" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=380&height=500&fansRow=1&ptype=1&speed=0&skin=5&isTitle=0&noborder=1&isWeibo=1&isFans=1&uid=2792206511&verifier=2ee24f3e&dpc=1"></iframe>');
+			//$("#iframe2").html('<iframe width="370" height="426"  frameborder="0" scrolling="no" src="http://widget.weibo.com/list/list.php?language=zh_cn&width=370&height=426&listid=454462789&uname=%E9%9D%92%E6%B5%B7%E5%BE%AE%E5%9B%A2-%E5%B0%95%E9%A9%AC&uid=2792206511&listname=%E6%8B%BC%E5%9B%A2%E8%87%AA%E7%94%B1%E8%A1%8C&color=CCCCCC,E1E1E1,444444,0082CB,FFFFFF,FFFFEA&showcreate=0&isborder=1&showtitle=0&appkey=&dpc=1"></iframe>');
+		});
+      </script>
 	<div class="route-thumbnail">
 		<p>
 		推荐路线
 		<p>
-
-		<div class="route-row routine-img">
-			%	for num in range(1,4):
-			<img src="img/route-${num}.png"></img>
+		<div class="route-row">
+			%	for num in range(1,5):
+			<img src="img/route-${num}.png" id="route-img-${num}"></img>
 			% endfor
 		</div>
 
 		<div class="route-row">
-			%	for num in range(1,4):
+			%	for num in range(1,5):
 			<img src="img/route-${num}.png"></img>
 			% endfor
 		</div>
@@ -60,7 +79,16 @@
 		<div class="route-row">
 			<img src="img/route-1.png">
 			<p>
-				第一天，第二天。。。
+青海湖祁连门源经典3日游:
+			</p>
+			<p>
+D1 西宁-丹噶尔古城-日月山-倒淌河-二郎剑-黑马河-茶卡盐湖(宿或返回黑马河宿)
+			</p>
+			<p>
+D2 黑马河-环湖西路-鸟岛-默勒草原-大冬树山-冰沟林海-祁连县(宿)
+			</p>
+			<p>
+D3 祁连-卓尔山牛心山-祁连草原-岗什卡雪峰-门源油菜花海-大坂山-黑泉水库-西宁
 			</p>
 		</div>
 
@@ -75,35 +103,49 @@
 
 		<!-- 行程，照片 -->
 		<div class="route-row other-header-row">
-			<p class="route-detail-title other-detail-title">
-				行程|照片|etc
-			</p>
+			<ul>
+			<li class="route-detail-title other-detail-title-selected">
+				行程
+			</li>
+			<li class="route-detail-title other-detail-title-unselected">
+				照片
+			</li>
+			<li class="route-detail-title other-detail-title-unselected">
+				etc
+			</li>
+			</ul>
 		</div>
 		<p>行程</p>
-		<p>
-			D1 西宁-丹葛尔古城-日月山-倒淌河-二郎剑-黑马河-茶卡盐湖(宿或返回黑马河宿) 食:
-宿:
-详细介绍:
-￼￼￼
-￼￼￼￼D3
-健谈。非常熟悉路况。
-详细介绍:
-D3
-健谈。非常熟悉路况。
-.........................................................
-.....................
-...................................................... ............
-￼￼￼￼D2 黑马河-环湖西路-鸟岛-默勒草原-大冬树山-冰沟林海-祁连县(宿) 食:
-宿:
-详细介绍:
-D3 祁连-卓尔山牛心山-祁连草原-岗什卡雪峰-门源油菜花海-大坂山-黑泉水库-西宁 食:
-宿:
-详细介绍:
-		</p>
+
+		<!-- start of route description -->
+		<div style="overflow:hidden">
+			<!-- left quick nav -->
+			<div id="route-quick-nav" class="route-quick-nav">
+				<ul>
+					%	for num in range(1,4):
+					<li class="route-day-x-nav">
+						<a href="#day${num}">D${num}</a>
+					</li>
+					% endfor
+				</ul>
+			</div>
+			<div style="margin-left:10px;float:left">
+				<p>
+				D1 西宁-丹葛尔古城-日月山-倒淌河-二郎剑-黑马河-茶卡盐湖(宿或返回黑马河宿) 食: 宿: 详细介绍:
+				</p>
+￼￼			<p>￼
+				D3 健谈。非常熟悉路况。 详细介绍: D3 健谈。非常熟悉路况。
+				</p>
+				<p>
+				D2 黑马河-环湖西路-鸟岛-默勒草原-大冬树山-冰沟林海-祁连县(宿) 食: 宿: 详细介绍:
+				</p>
+			</div>
+		</div>
+		<!-- end of route description -->
 
 		<!-- 相关 -->
 		<div class="route-row">
 			相关博客
 		</div>
-		
+		<p>青海湖——黑马河日出、祁连牛心</p>
 	</div>
