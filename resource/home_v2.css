@@ -9,10 +9,11 @@
 .main_left{
 	float:left;
 	width:700px;
+	padding-right:50px;
 }
 .main_right{
 	float:left;
-	width:300px
+	width:25%
 }
 .route-row{
 	overflow:hidden;

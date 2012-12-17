@@ -1,9 +1,34 @@
 <div>
 	<div class="portal_head">
    		<h3 align="center">公告</h3>
-       		</div>
-            	<a href="/traffic"><img style="width:170px;" src="traffic/images/九龙商务车.png"></a>
-            	<p>青海旅行最佳出游方式 当属包车,安全又省心
-              。青海微团有可靠的本 地司机和线上服务团
-              队,一切以驴友安全为 核心,以旅途愉快为目 的,为您的出行带来便利。</p> 
+  </div>
+  <a href="/traffic"><img style="width:170px;" src="/traffic/images/九龙商务车.png"></a>
+  <p>青海旅行最佳出游方式 当属包车,安全又省心 。青海微团有可靠的本 地司机和线上服务团 队,一切以驴友安全为 核心,以旅途愉快为目 的,为您的出行带来便利。</p> 
+
+	<div class="portal_head">
+  <h3 align="center">注意事项</h3>
+  </div>
+  <p  style="line-height:20px;">青海地域广阔，海拔整体较高，今年雨水偏多，前往旅游必须要做好充分准备。</p>
+  <p  style="line-height:20px;">青海地区紫外线强烈，一定要带足防晒用品；在湖边住宿要带上手电筒，以免晚上停电行动不方便。 </p>
+  <p  style="line-height:20px;" ><a href="/notice.shtml">查看更多...</a></p>
+	
+	<h3>微博</h3>
+	TBD
+	
+	<h3>淘宝</h3>
+	TBD
+	
+	<h3>拼车信息</h3>
+	TBD
+
+	<div class="portal_head">
+ 		<h3 align="center">联系我们</h3>
+  </div>
+  <p style="line-height:20px;" ><a class="sina" href="http://weibo.com/gamayou" target="_blank">新浪微博</a></p>
+  <p style="line-height:20px;"><a class="mail" href="mailto:gamayou@live.cn" target="_blank">邮件</a></p>
+  <p style="line-height:20px;"><a class="fanfou" href="http://fanfou.com/gamayou" target="_blank">饭否</a></p>
+  <p style="line-height:20px;"><a class="contact_bg taobao_login" href="http://shop73203150.taobao.com/" target="_blank">淘宝旺旺</a></p>
+  <p style="line-height:20px;" id="qq1">QQ: 2259531092 </p>
+  <p style="line-height:20px;" id="qq2">QQ: 476670125 </p>
+
 </div>

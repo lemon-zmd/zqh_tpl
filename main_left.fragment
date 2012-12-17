@@ -1,6 +1,20 @@
-	<!-- thumbnail image part -->
+<!-- thumbnail image part -->
 <script type="text/javascript">
 		$(window).load(function() {
+				for(i=1;i<5;i++){
+					$('#route-img-1-' + i).click(function(){
+    				$('#route-x').animate({
+    				    marginLeft: '-=100%'
+    				}, 500, function() {
+    				    $('#route-x').css('margin-left', '100%');
+    				    //$('#route-x').css('position', 'absolute');
+    				});
+    				$('#route-x').animate({
+    				    marginLeft:'0'
+    				}, 500);
+					});
+				}
+
 			//$('#route-img-1').css({'border':'3px solid #C2DD91'});
 			//$('#qq1').html('<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2259531092&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:2259531092:41" alt="点击这里给我发消息" title="点击这里给我发消息"></a>');
 			//$('#qq2').html('<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2691531884&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:2691531884:41" alt="点击这里给我发消息" title="点击这里给我发消息"></a>');
@@ -14,19 +28,19 @@
 		<p>
 		<div class="route-row">
 			%	for num in range(1,5):
-			<img src="img/route-${num}.png" id="route-img-${num}"></img>
+			<img src="img/route-${num}.png" id="route-img-1-${num}"></img>
 			% endfor
 		</div>
 
 		<div class="route-row">
 			%	for num in range(1,5):
-			<img src="img/route-${num}.png"></img>
+			<img src="img/route-${num}.png" id="route-img-2-${num}"></img>
 			% endfor
 		</div>
 	</div>
 
 	<!-- route X -->
-	<div>
+	<div id="route-x">
 		<!-- 路线 -->
 		<div class="route-row route-x-header-row"> 
 			<p class="route-detail-title route-x-detail-title" id="route-x">
