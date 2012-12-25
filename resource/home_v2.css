@@ -74,7 +74,8 @@
   text-align:center;
 }
 .companion-btn{
-	float:right;
+	float:left;
+	margin-left:450px;
 	padding:5px 10px 5px 10px;
 	background-color:#FE8777;
   -webkit-border-radius: 10px;

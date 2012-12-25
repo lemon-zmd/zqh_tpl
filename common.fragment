@@ -7,4 +7,5 @@
 	<!-- the new v2 css file -->
   <link href="home_v2.css" rel="stylesheet" type="text/css" />
   <script type="text/javascript" src="jquery-1.8.2.min.js"></script>
+  <script type="text/javascript" src="home_v2.js"></script>
 </head>

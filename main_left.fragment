@@ -12,8 +12,19 @@
     				$('#route-x').animate({
     				    marginLeft:'0'
     				}, 500);
+						// get data for route-x
+						getData($(this).attr("route_index"));
 					});
 				}
+			// click event handler
+					$('#notice_li').click(function(){
+						$('#route_desc_section').css('display','none');
+						$('#notice_section').css('display','block');
+					});
+					$('#route_desc_li').click(function(){
+						$('#notice_section').css('display','none');
+						$('#route_desc_section').css('display','block');
+					});
 
 			//$('#route-img-1').css({'border':'3px solid #C2DD91'});
 			//$('#qq1').html('<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2259531092&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:2259531092:41" alt="点击这里给我发消息" title="点击这里给我发消息"></a>');
@@ -28,7 +39,7 @@
 		<p>
 		<div class="route-row">
 			%	for num in range(1,5):
-			<img src="img/route-${num}.png" id="route-img-1-${num}"></img>
+			<img src="img/route-${num}.png" id="route-img-1-${num}" route_index="${num}"></img>
 			% endfor
 		</div>
 
@@ -48,7 +59,7 @@
 			</p>
 		</div>
 			<!-- 线路简介 -->
-		<div class="route-row">
+		<div class="route-row" id="route_short_desc">
 			<img src="img/route-1.png">
 			<p>
 青海湖祁连门源经典3日游:
@@ -84,19 +95,20 @@ D3 祁连-卓尔山牛心山-祁连草原-岗什卡雪峰-门源油菜花海-大
 		<div class="route-row other-header-row">
 			<ul>
 			<li class="route-detail-title other-detail-title-selected">
-				<a href="#">行程</a>
+				<a cores_section="route_desc_section" id="route_desc_li" href="#">行程</a>
 			</li>
 			<li class="route-detail-title other-detail-title-unselected">
+				<a cores_section="notice_section" id="notice_li" href="#">注意事项</a>
 				照片
 			</li>
 			<li class="route-detail-title other-detail-title-unselected">
-				etc
+				<a id="photo_li" href="#">照片</a>
 			</li>
 			</ul>
 		</div>
 
 		<!-- start of route description -->
-		<div style="overflow:hidden">
+		<div id="route_desc_section" style="overflow:hidden">
 			<!-- left quick nav -->
 			<div id="route-quick-nav" class="route-quick-nav">
 				<ul>
@@ -127,7 +139,20 @@ D3 祁连-卓尔山牛心山-祁连草原-岗什卡雪峰-门源油菜花海-大
 			</div>
 		</div>
 		<!-- end of route description -->
-
+		<!-- 注意事项  -->
+		<div id="notice_section" style="display:none">
+			<p>
+				1.二郎剑景区附近参观住宿都较贵，预算不多的同学可以选择带些干粮，或者在它的前一站或后一站吃饭。特别提示：二郎剑景区晚上看银河是最佳地点。
+2. 黑马河住宿最好选择湖边的民家，第二日看日出可以免门票。
+3. 在景区内与藏族人合影一定要问清楚价格，具体到一张多少钱。
+			</p>
+		</div>
+		<!-- 注意事项 end -->
+		<!-- 照片-->
+		<div>
+			<img>
+		</div>
+		<!-- 照片 end -->
 		<!-- 相关 -->
 		<div class="route-row">
 			相关博客
