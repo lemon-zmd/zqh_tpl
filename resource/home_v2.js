@@ -1,12 +1,10 @@
-function getData(routex){
+function getData(data_url, id){
 	$.ajax({ 
   	type: "get", 
-    url: "/home_v2/json/route/route_"+routex+".json",
+		url:data_url,
     dataType: "json", 
     success: function (data) { 
-			//alert(encoded.content);
-			renderHTML('route_short_desc',data.content);
-    	//$("input#showTime").val(data[0].demoData); 
+			renderHTML(id, data.content);
     }, 
     error: function (XMLHttpRequest, textStatus, errorThrown) { 
     	alert(errorThrown); 
@@ -14,7 +12,6 @@ function getData(routex){
   });	
 }
 function renderHTML(id, content){
-	alert('render');
 	$('#'+id).html(content);
 }
 

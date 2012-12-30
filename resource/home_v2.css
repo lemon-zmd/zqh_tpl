@@ -1,3 +1,8 @@
+#photo_section img{
+	margin:10px;
+	width:70px;
+	height:70px;
+}
 .route-thumbnail{
 	overflow:hidden;
 }

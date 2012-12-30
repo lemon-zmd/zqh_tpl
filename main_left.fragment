@@ -1,6 +1,7 @@
 <!-- thumbnail image part -->
 <script type="text/javascript">
 		$(window).load(function() {
+				var CUR_INDEX=1;
 				for(i=1;i<5;i++){
 					$('#route-img-1-' + i).click(function(){
     				$('#route-x').animate({
@@ -12,19 +13,41 @@
     				$('#route-x').animate({
     				    marginLeft:'0'
     				}, 500);
+						CUR_INDEX=$(this).attr("route_index");
 						// get data for route-x
-						getData($(this).attr("route_index"));
+						getData("/home_v2/json/route/route_"+CUR_INDEX+".json","route_short_desc");
 					});
 				}
 			// click event handler
-					$('#notice_li').click(function(){
-						$('#route_desc_section').css('display','none');
-						$('#notice_section').css('display','block');
-					});
-					$('#route_desc_li').click(function(){
-						$('#notice_section').css('display','none');
-						$('#route_desc_section').css('display','block');
-					});
+			$('#notice_li').click(function(){
+				$('#route_desc_section').css('display','none');
+				$('#photo_section').css('display','none');
+				$('#notice_section').css('display','block');
+
+				$('#notice_tab').attr('class', 'route-detail-title other-detail-title-selected')
+				$('#route_tab').attr('class', 'route-detail-title other-detail-title-unselected')
+				$('#photo_tab').attr('class', 'route-detail-title other-detail-title-unselected')
+				getData("/home_v2/json/notice/route_"+CUR_INDEX+".json", "notice_section");
+			});
+			$('#route_desc_li').click(function(){
+				$('#notice_section').css('display','none');
+				$('#photo_section').css('display','none');
+				$('#route_desc_section').css('display','block');
+
+				$('#notice_tab').attr('class', 'route-detail-title other-detail-title-unselected')
+				$('#route_tab').attr('class', 'route-detail-title other-detail-title-selected')
+				$('#photo_tab').attr('class', 'route-detail-title other-detail-title-unselected')
+			});
+
+			$('#photo_li').click(function(){
+				$('#route_desc_section').css('display','none');
+				$('#notice_section').css('display','none');
+				$('#photo_section').css('display','block');
+
+				$('#notice_tab').attr('class', 'route-detail-title other-detail-title-unselected')
+				$('#route_tab').attr('class', 'route-detail-title other-detail-title-unselected')
+				$('#photo_tab').attr('class', 'route-detail-title other-detail-title-selected')
+			});
 
 			//$('#route-img-1').css({'border':'3px solid #C2DD91'});
 			//$('#qq1').html('<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2259531092&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:2259531092:41" alt="点击这里给我发消息" title="点击这里给我发消息"></a>');
@@ -91,18 +114,17 @@ D3 祁连-卓尔山牛心山-祁连草原-岗什卡雪峰-门源油菜花海-大
 		</div>
 		<p style="border-bottom:1px solid #C2DD91; padding:5px 10px 5px 10px;">  注:预算增加减少会根据吃住有些许浮动,只做参考使用!</p>
 
-		<!-- 行程，照片 -->
+		<!-- 行程,注意事项, 照片 -->
 		<div class="route-row other-header-row">
 			<ul>
-			<li class="route-detail-title other-detail-title-selected">
-				<a cores_section="route_desc_section" id="route_desc_li" href="#">行程</a>
+			<li id="route_tab" class="route-detail-title other-detail-title-selected">
+				<a cores_section="route_desc_section" id="route_desc_li" href="##">行程</a>
 			</li>
-			<li class="route-detail-title other-detail-title-unselected">
-				<a cores_section="notice_section" id="notice_li" href="#">注意事项</a>
-				照片
+			<li id="notice_tab" class="route-detail-title other-detail-title-unselected">
+				<a cores_section="notice_section" id="notice_li" href="##">注意事项</a>
 			</li>
-			<li class="route-detail-title other-detail-title-unselected">
-				<a id="photo_li" href="#">照片</a>
+			<li id="photo_tab" class="route-detail-title other-detail-title-unselected">
+				<a id="photo_li" href="##">照片</a>
 			</li>
 			</ul>
 		</div>
@@ -120,7 +142,6 @@ D3 祁连-卓尔山牛心山-祁连草原-岗什卡雪峰-门源油菜花海-大
 				</ul>
 			</div>
 			<div class="route-desc-section">
-
 				<p id="day1">D1 西宁-丹葛尔古城-日月山-倒淌河-二郎剑-黑马河-茶卡盐湖(宿或返回黑马河宿)</p>
 				<p>食：</p>
 				<p>住宿：</p>
@@ -149,8 +170,19 @@ D3 祁连-卓尔山牛心山-祁连草原-岗什卡雪峰-门源油菜花海-大
 		</div>
 		<!-- 注意事项 end -->
 		<!-- 照片-->
-		<div>
-			<img>
+		<div id="photo_section" style="display:none">
+			<div>
+				<img src="/gallery/image/my/photo1.jpg">	
+				<img src="/gallery/image/my/photo2.jpg">	
+				<img src="/gallery/image/my/photo3.jpg">	
+				<img src="/gallery/image/my/photo4.jpg">	
+			</div>
+			<div>
+				<img src="/gallery/image/my/photo1.jpg">	
+				<img src="/gallery/image/my/photo2.jpg">	
+				<img src="/gallery/image/my/photo3.jpg">	
+				<img src="/gallery/image/my/photo4.jpg">	
+			</div>
 		</div>
 		<!-- 照片 end -->
 		<!-- 相关 -->

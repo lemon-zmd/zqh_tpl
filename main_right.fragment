@@ -1,3 +1,9 @@
+<script type="text/javascript">
+    $(window).load(function() {
+	    $('#qq1').html('<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2259531092&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:2259531092:41" alt="点击这里给我发消息" title="点击这里给我发消息"></a>');
+      $('#qq2').html('<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2691531884&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:2691531884:41" alt="点击这里给我发消息" title="点击这里给我发消息"></a>');
+		});
+</script>
 <div>
 	<div class="portal_head">
    		<h3 align="center">公告</h3>
@@ -12,13 +18,18 @@
   <p  style="line-height:20px;">青海地区紫外线强烈，一定要带足防晒用品；在湖边住宿要带上手电筒，以免晚上停电行动不方便。 </p>
   <p  style="line-height:20px;" ><a href="/notice.shtml">查看更多...</a></p>
 	
-	<h3>微博</h3>
+	<div class="portal_head">
+		<h3>微博</h3>
+	</div>
+	<iframe width="100%" height="350" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=350&fansRow=1&ptype=1&speed=0&skin=5&isTitle=0&noborder=1&isWeibo=1&isFans=1&uid=2816578507&verifier=2eb84120&dpc=1"></iframe>
+	<div class="portal_head">
+		<h3>淘宝</h3>
+	</div>
 	TBD
 	
-	<h3>淘宝</h3>
-	TBD
-	
-	<h3>拼车信息</h3>
+	<div class="portal_head">
+		<h3>拼车信息</h3>
+	</div>
 	TBD
 
 	<div class="portal_head">
