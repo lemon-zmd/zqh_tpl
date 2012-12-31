@@ -1,61 +1,4 @@
 <!-- thumbnail image part -->
-<script type="text/javascript">
-		$(window).load(function() {
-				var CUR_INDEX=1;
-				for(i=1;i<5;i++){
-					$('#route-img-1-' + i).click(function(){
-    				$('#route-x').animate({
-    				    marginLeft: '-=100%'
-    				}, 500, function() {
-    				    $('#route-x').css('margin-left', '100%');
-    				    //$('#route-x').css('position', 'absolute');
-    				});
-    				$('#route-x').animate({
-    				    marginLeft:'0'
-    				}, 500);
-						CUR_INDEX=$(this).attr("route_index");
-						// get data for route-x
-						getData("/home_v2/json/route/route_"+CUR_INDEX+".json","route_short_desc");
-					});
-				}
-			// click event handler
-			$('#notice_li').click(function(){
-				$('#route_desc_section').css('display','none');
-				$('#photo_section').css('display','none');
-				$('#notice_section').css('display','block');
-
-				$('#notice_tab').attr('class', 'route-detail-title other-detail-title-selected')
-				$('#route_tab').attr('class', 'route-detail-title other-detail-title-unselected')
-				$('#photo_tab').attr('class', 'route-detail-title other-detail-title-unselected')
-				getData("/home_v2/json/notice/route_"+CUR_INDEX+".json", "notice_section");
-			});
-			$('#route_desc_li').click(function(){
-				$('#notice_section').css('display','none');
-				$('#photo_section').css('display','none');
-				$('#route_desc_section').css('display','block');
-
-				$('#notice_tab').attr('class', 'route-detail-title other-detail-title-unselected')
-				$('#route_tab').attr('class', 'route-detail-title other-detail-title-selected')
-				$('#photo_tab').attr('class', 'route-detail-title other-detail-title-unselected')
-			});
-
-			$('#photo_li').click(function(){
-				$('#route_desc_section').css('display','none');
-				$('#notice_section').css('display','none');
-				$('#photo_section').css('display','block');
-
-				$('#notice_tab').attr('class', 'route-detail-title other-detail-title-unselected')
-				$('#route_tab').attr('class', 'route-detail-title other-detail-title-unselected')
-				$('#photo_tab').attr('class', 'route-detail-title other-detail-title-selected')
-			});
-
-			//$('#route-img-1').css({'border':'3px solid #C2DD91'});
-			//$('#qq1').html('<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2259531092&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:2259531092:41" alt="点击这里给我发消息" title="点击这里给我发消息"></a>');
-			//$('#qq2').html('<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2691531884&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:2691531884:41" alt="点击这里给我发消息" title="点击这里给我发消息"></a>');
-			//$("#iframe1").html('<iframe width="370" height="500" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=380&height=500&fansRow=1&ptype=1&speed=0&skin=5&isTitle=0&noborder=1&isWeibo=1&isFans=1&uid=2792206511&verifier=2ee24f3e&dpc=1"></iframe>');
-			//$("#iframe2").html('<iframe width="370" height="426"  frameborder="0" scrolling="no" src="http://widget.weibo.com/list/list.php?language=zh_cn&width=370&height=426&listid=454462789&uname=%E9%9D%92%E6%B5%B7%E5%BE%AE%E5%9B%A2-%E5%B0%95%E9%A9%AC&uid=2792206511&listname=%E6%8B%BC%E5%9B%A2%E8%87%AA%E7%94%B1%E8%A1%8C&color=CCCCCC,E1E1E1,444444,0082CB,FFFFFF,FFFFEA&showcreate=0&isborder=1&showtitle=0&appkey=&dpc=1"></iframe>');
-		});
-</script>
 	<div class="route-thumbnail">
 		<p>
 		推荐路线
@@ -129,8 +72,8 @@ D3 祁连-卓尔山牛心山-祁连草原-岗什卡雪峰-门源油菜花海-大
 			</ul>
 		</div>
 
-		<!-- start of route description -->
-		<div id="route_desc_section" style="overflow:hidden">
+		<!-- 行程 -->
+		<div id="route_desc_section" class="section" style="overflow:hidden">
 			<!-- left quick nav -->
 			<div id="route-quick-nav" class="route-quick-nav">
 				<ul>
@@ -147,7 +90,7 @@ D3 祁连-卓尔山牛心山-祁连草原-岗什卡雪峰-门源油菜花海-大
 				<p>住宿：</p>
 				<p class="endline">详细介绍：</p>
 
-￼￼			<p id="day2">D2 黑马河-环湖西路-鸟岛-默勒草原-大冬树山-冰沟林海-祁连县(宿)</p>
+		<p id="day2">D2 黑马河-环湖西路-鸟岛-默勒草原-大冬树山-冰沟林海-祁连县(宿)</p>
 				<p>食：</p>
 				<p>住宿：</p>
 				<p class="endline">详细介绍：</p>
@@ -156,12 +99,11 @@ D3 祁连-卓尔山牛心山-祁连草原-岗什卡雪峰-门源油菜花海-大
 				<p>食：</p>
 				<p>住宿：</p>
 				<p class="endline">详细介绍：</p>
-
 			</div>
 		</div>
-		<!-- end of route description -->
+		<!-- 行程 -->
 		<!-- 注意事项  -->
-		<div id="notice_section" style="display:none">
+		<div id="notice_section" class="section" style="display:none">
 			<p>
 				1.二郎剑景区附近参观住宿都较贵，预算不多的同学可以选择带些干粮，或者在它的前一站或后一站吃饭。特别提示：二郎剑景区晚上看银河是最佳地点。
 2. 黑马河住宿最好选择湖边的民家，第二日看日出可以免门票。
@@ -170,7 +112,7 @@ D3 祁连-卓尔山牛心山-祁连草原-岗什卡雪峰-门源油菜花海-大
 		</div>
 		<!-- 注意事项 end -->
 		<!-- 照片-->
-		<div id="photo_section" style="display:none">
+		<div id="photo_section" class="section" style="display:none">
 			<div>
 				<img src="/gallery/image/my/photo1.jpg">	
 				<img src="/gallery/image/my/photo2.jpg">	
